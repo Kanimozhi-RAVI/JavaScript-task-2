@@ -1,0 +1,98 @@
+body {
+	margin: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100vh;
+	font-family: Arial, sans-serif;
+  }
+  
+  #calculator {
+	background-color: transparent;
+	max-width: 275px;
+	overflow: hidden;
+  }
+  #display {
+  	width: 88%;
+    height: 60px;
+    padding: 10px 14px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: right;
+    color: #1c1c1c;
+    background-color: #f1f1f1;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.7),
+              inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+              4px 4px 15px rgba(220, 20, 60, 0.2);
+  }
+
+  #keys {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1px;
+	padding: 5px;
+	border: 1px solid white;
+	margin-top: 100px;
+  }
+  #equl-btn {
+	width: 60px;
+	height: 120px;
+  }
+  
+  #zero-btn {
+	width: 120px;
+	height: 60px;
+  }
+  button {
+	width: 60px;
+	height: 60px;
+	background-color: lightgray;
+	border: 2px solid whitesmoke;
+	margin: 1px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	border-style: outset;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+	color: black;
+	border-radius: 6px;
+  }
+  button:hover {
+	 transform: translateY(-2px);
+	background:white;
+	box-shadow: -8px 0 15px rgba(220, 20, 60, 0.3);
+  }
+  button:active {
+	 transform: translateY(2px);
+	box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: hidden;
+	background: black;
+	position: relative;
+	font-family: Arial, sans-serif;
+  }
+  
+  canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	pointer-events: none; /* So clicks go through to the buttons */
+  }
+  
+  #starsCanvas {
+	z-index: 0;
+  }
+  #snowCanvas {
+	z-index: 1;
+  }
+  
+  
