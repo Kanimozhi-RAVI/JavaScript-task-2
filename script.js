@@ -145,10 +145,11 @@ snowCanvas.addEventListener("mousemove", function(e) {
 
 initSnow();
 
-let display = document.getElementById('display');
 
-function appendToDisplay(value) {
-  display.value += value;
+const display = document.getElementById('display');
+
+function appendToDisplay(val) {
+  display.value += val;
 }
 
 function clearDisplay() {
@@ -162,7 +163,21 @@ function backspace() {
 function calculate() {
   try {
     display.value = eval(display.value);
-  } catch (error) {
+  } catch {
     display.value = 'Error';
   }
 }
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    calculate();
+  }
+})
+
+display.addEventListener('input', function(e) {
+  const allowed = '0123456789+-*/.';
+  const lastChar = display.value.slice(-1);
+
+  if (!allowed.includes(lastChar)) {
+    display.value = display.value.slice(0, -1);
+  }
+});
